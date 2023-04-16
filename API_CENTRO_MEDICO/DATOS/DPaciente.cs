@@ -10,6 +10,7 @@ namespace API_CENTRO_MEDICO.DATOS
     {
         private Conexion conn = new Conexion();
         SqlCommand cmd = new SqlCommand();
+
         public void GuardarPaciente(MPaciente Paciente)
         {
             cmd.Connection = conn.AbrirConexionDB();
