@@ -6,6 +6,5 @@
         public int IdPaciente { get; set; }
         public int IdDoctor { get; set; }
         public DateTime Fecha_Cita { get; set; }
-        public DateTime Hora_Cita { get; set; }
     }
 }
