@@ -23,5 +23,12 @@ namespace INTERFAZ_CENTRO_MEDICO
             Form_RegPaciente formRegPacientes = new Form_RegPaciente();
             formRegPacientes.Show();
         }
+
+        private void btnDoctores_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form_Doctor formDoctor = new Form_Doctor();
+            formDoctor.Show();
+        }
     }
 }

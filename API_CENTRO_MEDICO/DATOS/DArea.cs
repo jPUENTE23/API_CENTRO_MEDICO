@@ -22,5 +22,17 @@ namespace API_CENTRO_MEDICO.DATOS
 
             cmd.ExecuteNonQuery();
         }
+
+
+        public SqlDataReader getAreas()
+        {
+            cmd.Connection = conn.AbrirConexionDB();
+            cmd.CommandText = "SP_OBTENER_AREAS";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlDataReader areas = cmd.ExecuteReader();
+
+            return areas;
+        }
     }
 }

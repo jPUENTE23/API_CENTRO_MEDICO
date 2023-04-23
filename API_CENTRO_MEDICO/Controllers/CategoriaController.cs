@@ -16,5 +16,25 @@ namespace API_CENTRO_MEDICO.Controllers
             var agregarArea = new DArea();
             agregarArea.AgragrArea(Area);
         }
+
+        [HttpGet]
+        [Route("AreasMedicas")]
+        public List<MArea> AreasMedicas()
+        {
+            DArea areas = new DArea();
+            var datosArea = areas.getAreas();
+
+
+            List<MArea> lstAreas = new List<MArea>();
+            while (datosArea.Read())
+            {
+                MArea Areas = new MArea();
+                Areas.IdArea = (int)datosArea["idArea"];
+                Areas.NombreArea = (string)datosArea["NombreArea"];
+                lstAreas.Add(Areas);
+            }
+
+            return lstAreas;
+        }
     }
 }

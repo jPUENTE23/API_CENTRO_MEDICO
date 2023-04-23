@@ -4,6 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,8 +31,10 @@ namespace INTERFAZ_CENTRO_MEDICO
             formInicio.Show();
         }
 
-        private void btn_AgregarPac_Click(object sender, EventArgs e)
+        private async void btn_AgregarPac_Click(object sender, EventArgs e)
         {
+
+            /*Almacenamos los datos ingresados en un nuevo objeto*/
             MPaciente Paciente = new MPaciente();
             Paciente.Nombre = txtNombre.Text;
             Paciente.Apaterno = txtApaterno.Text;
@@ -37,8 +42,18 @@ namespace INTERFAZ_CENTRO_MEDICO
             Paciente.Edad = int.Parse(txtEdad.Text);
             Paciente.Sexo = txtSexo.Text;
 
+            /*Iniciamos una instancia para mandasr los datos a una peticion */
             var agregarPaciente = new RequestPaciente();
-            agregarPaciente.AgregarPaciente(Paciente);
+
+            /*Mandamos la peticion al servidor*/
+            HttpResponseMessage resp = await agregarPaciente.AgregarPaciente(Paciente);
+
+
+            /*Si la peticion nos devuelve un statusCode 200, significa que los datos han sido registrados correctamente */
+            if (resp.IsSuccessStatusCode)
+            {
+                MessageBox.Show("El paciente se ah registrado correctamente");
+            }
 
         }
     }

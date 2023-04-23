@@ -14,28 +14,14 @@ namespace INTERFAZ_CENTRO_MEDICO.API_REQUEST
 {
     class RequestPaciente
     {
-        static HttpClient client = new HttpClient();
-        static void IniciarCliente()
+        public async Task<HttpResponseMessage> AgregarPaciente(MPaciente DatosPaciente)
         {
-            client.BaseAddress = new Uri("https://localhost:7168/");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        }
-
-        static async Task<Uri> AltaPaciente(MPaciente Paciente)
-        {
-            HttpResponseMessage response = await client.PostAsJsonAsync("Paciente/AltaPaciente", Paciente);
-            response.EnsureSuccessStatusCode();
-
-            return response.Headers.Location;
-        }
-
-        public void AgregarPaciente(MPaciente DatosPaciente)
-        {
-            IniciarCliente();
-            try
+            /*Indicamos la url a la que mandaro los datos */
+            string url = "https://localhost:7168/Paciente/AltaPaciente";
+            using (var httpCliente = new HttpClient())
             {
 
+                /*Almacenamos los datos que reciban los parametros del metodo */
                 MPaciente paciente = new MPaciente();
                 paciente.Nombre = DatosPaciente.Nombre;
                 paciente.Apaterno = DatosPaciente.Apaterno;
@@ -43,12 +29,11 @@ namespace INTERFAZ_CENTRO_MEDICO.API_REQUEST
                 paciente.Edad = DatosPaciente.Edad;
                 paciente.Sexo = DatosPaciente.Sexo;
 
-                var response = AltaPaciente(paciente);
+                /*Mandamos los datos ingresados a la url indicada andicada anterior mente junn con el objeto que recolecto los datos*/
+                HttpResponseMessage reponse = await httpCliente.PostAsJsonAsync(url, paciente);
 
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
+                /*Reternoamos la respueste por parte del servidor */
+                return reponse;
             }
         }
     }

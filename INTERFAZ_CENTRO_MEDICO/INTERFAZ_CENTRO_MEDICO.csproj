@@ -52,12 +52,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API_REQUEST\RequestArea.cs" />
+    <Compile Include="API_REQUEST\RequestDoctor.cs" />
     <Compile Include="API_REQUEST\RequestPacientes.cs" />
     <Compile Include="Form_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Inicio.Designer.cs">
       <DependentUpon>Form_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Doctor.Designer.cs">
+      <DependentUpon>Form_Doctor.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_RegPaciente.cs">
       <SubType>Form</SubType>
@@ -74,6 +82,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_Inicio.resx">
       <DependentUpon>Form_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Doctor.resx">
+      <DependentUpon>Form_Doctor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_RegPaciente.resx">
       <DependentUpon>Form_RegPaciente.cs</DependentUpon>
