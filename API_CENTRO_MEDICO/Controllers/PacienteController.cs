@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using API_CENTRO_MEDICO.MODELOS;
 using API_CENTRO_MEDICO.DATOS;
 
+
 namespace API_CENTRO_MEDICO.Controllers
 {
     [ApiController]
@@ -9,7 +10,7 @@ namespace API_CENTRO_MEDICO.Controllers
     public class PacienteController : ControllerBase
     {
         [HttpPost]
-        [Route("Alta")]
+        [Route("AltaPaciente")]
         public void AltaPaciente([FromBody] MPaciente Paciente)
         {
             var registroPac = new DPaciente();
