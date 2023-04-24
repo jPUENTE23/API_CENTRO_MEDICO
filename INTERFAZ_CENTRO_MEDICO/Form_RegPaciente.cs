@@ -40,7 +40,9 @@ namespace INTERFAZ_CENTRO_MEDICO
             Paciente.Apaterno = txtApaterno.Text;
             Paciente.Amaterno = txtAmaterno.Text;
             Paciente.Edad = int.Parse(txtEdad.Text);
-            Paciente.Sexo = txtSexo.Text;
+
+            int index = cb_sexo.SelectedIndex;
+            Paciente.Sexo = cb_sexo.Items[index].ToString();
 
             /*Iniciamos una instancia para mandasr los datos a una peticion */
             var agregarPaciente = new RequestPaciente();

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.link_NuevaArea = new System.Windows.Forms.LinkLabel();
             this.cb_AreasM = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
@@ -36,7 +37,6 @@
             this.btn_RegMenu = new System.Windows.Forms.Button();
             this.btn_AgregarDoc = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSexo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAmaterno = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,12 +44,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.link_NuevaArea = new System.Windows.Forms.LinkLabel();
+            this.cb_sexo = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.cb_sexo);
             this.panel2.Controls.Add(this.link_NuevaArea);
             this.panel2.Controls.Add(this.cb_AreasM);
             this.panel2.Controls.Add(this.label7);
@@ -58,7 +59,6 @@
             this.panel2.Controls.Add(this.btn_RegMenu);
             this.panel2.Controls.Add(this.btn_AgregarDoc);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.txtSexo);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.txtAmaterno);
             this.panel2.Controls.Add(this.label4);
@@ -71,6 +71,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(287, 655);
             this.panel2.TabIndex = 2;
+            // 
+            // link_NuevaArea
+            // 
+            this.link_NuevaArea.AutoSize = true;
+            this.link_NuevaArea.Location = new System.Drawing.Point(135, 542);
+            this.link_NuevaArea.Name = "link_NuevaArea";
+            this.link_NuevaArea.Size = new System.Drawing.Size(101, 13);
+            this.link_NuevaArea.TabIndex = 14;
+            this.link_NuevaArea.TabStop = true;
+            this.link_NuevaArea.Text = "Agregar nueva area";
+            this.link_NuevaArea.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cb_AreasM
             // 
@@ -138,13 +149,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Registrar Doctor";
             // 
-            // txtSexo
-            // 
-            this.txtSexo.Location = new System.Drawing.Point(36, 440);
-            this.txtSexo.Name = "txtSexo";
-            this.txtSexo.Size = new System.Drawing.Size(200, 20);
-            this.txtSexo.TabIndex = 8;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -206,16 +210,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
-            // link_NuevaArea
+            // cb_sexo
             // 
-            this.link_NuevaArea.AutoSize = true;
-            this.link_NuevaArea.Location = new System.Drawing.Point(135, 542);
-            this.link_NuevaArea.Name = "link_NuevaArea";
-            this.link_NuevaArea.Size = new System.Drawing.Size(101, 13);
-            this.link_NuevaArea.TabIndex = 14;
-            this.link_NuevaArea.TabStop = true;
-            this.link_NuevaArea.Text = "Agregar nueva area";
-            this.link_NuevaArea.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cb_sexo.FormattingEnabled = true;
+            this.cb_sexo.Items.AddRange(new object[] {
+            "F",
+            "M"});
+            this.cb_sexo.Location = new System.Drawing.Point(36, 440);
+            this.cb_sexo.Name = "cb_sexo";
+            this.cb_sexo.Size = new System.Drawing.Size(200, 21);
+            this.cb_sexo.TabIndex = 15;
             // 
             // Form_Doctor
             // 
@@ -239,7 +243,6 @@
         private System.Windows.Forms.Button btn_RegMenu;
         private System.Windows.Forms.Button btn_AgregarDoc;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtAmaterno;
         private System.Windows.Forms.Label label4;
@@ -250,5 +253,6 @@
         private System.Windows.Forms.ComboBox cb_AreasM;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.LinkLabel link_NuevaArea;
+        private System.Windows.Forms.ComboBox cb_sexo;
     }
 }
