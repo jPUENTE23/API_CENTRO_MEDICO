@@ -22,6 +22,7 @@ namespace INTERFAZ_CENTRO_MEDICO
         public Form_RegPaciente()
         {
             InitializeComponent();
+            PacientesDataGrid();
         }
 
         private void btn_RegMenu_Click(object sender, EventArgs e)
@@ -57,6 +58,26 @@ namespace INTERFAZ_CENTRO_MEDICO
                 MessageBox.Show("El paciente se ah registrado correctamente");
             }
 
+        }
+
+
+        public async void PacientesDataGrid()
+        {
+            var funcionPaciente = new RequestPaciente();
+            List<MPaciente> lstPacientes = await funcionPaciente.MostrarPacientes();
+
+            int indexPaciente;
+            foreach (MPaciente paciente in lstPacientes)
+            {
+                indexPaciente = dataGrid_Paciente.Rows.Add();
+                dataGrid_Paciente.Rows[indexPaciente].Cells[0].Value = paciente.idPaciente;
+                dataGrid_Paciente.Rows[indexPaciente].Cells[1].Value = paciente.Nombre;
+                dataGrid_Paciente.Rows[indexPaciente].Cells[2].Value = paciente.Apaterno;
+                dataGrid_Paciente.Rows[indexPaciente].Cells[3].Value = paciente.Amaterno;
+                dataGrid_Paciente.Rows[indexPaciente].Cells[4].Value = paciente.Edad;
+                dataGrid_Paciente.Rows[indexPaciente].Cells[5].Value = paciente.Sexo;
+
+            }
         }
     }
 }

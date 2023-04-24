@@ -11,6 +11,6 @@ namespace INTERFAZ_CENTRO_MEDICO.Modelos
         public int Edad { get; set; }
         public string Sexo { get; set; }
         public int IsActivo { get; set; }
-        public int IdArea { get; set; }
+        public dynamic IdArea { get; set; }
     }
 }

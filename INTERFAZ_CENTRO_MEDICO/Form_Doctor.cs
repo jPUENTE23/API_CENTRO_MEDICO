@@ -21,6 +21,7 @@ namespace INTERFAZ_CENTRO_MEDICO
         {
             InitializeComponent();
             datosAreas();
+            DoctoresDataGrid();
         }
 
         private void btn_RegMenu_Click(object sender, EventArgs e)
@@ -83,6 +84,33 @@ namespace INTERFAZ_CENTRO_MEDICO
                 }
             }
             return idArea;
+        }
+
+        private void link_NuevaArea_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Form_AreaMedica formAreaMedica = new Form_AreaMedica();
+            formAreaMedica.Show();
+        }
+
+        public async void DoctoresDataGrid()
+        {
+            var funcionDoctores = new RequestDoctor();
+            List<MDoctor> lstDoctores = await funcionDoctores.MostrarDoctores();
+
+            int indexDoctor;
+            foreach (MDoctor doctor in lstDoctores)
+            {
+                indexDoctor = dataGrid_Doctores.Rows.Add();
+                dataGrid_Doctores.Rows[indexDoctor].Cells[0].Value = doctor.IdDoctor;
+                dataGrid_Doctores.Rows[indexDoctor].Cells[1].Value = doctor.Nombre;
+                dataGrid_Doctores.Rows[indexDoctor].Cells[2].Value = doctor.Apeterno;
+                dataGrid_Doctores.Rows[indexDoctor].Cells[3].Value = doctor.Amaterno;
+                dataGrid_Doctores.Rows[indexDoctor].Cells[4].Value = doctor.Edad;
+                dataGrid_Doctores.Rows[indexDoctor].Cells[5].Value = doctor.Sexo;
+                dataGrid_Doctores.Rows[indexDoctor].Cells[6].Value = doctor.IsActivo;
+                dataGrid_Doctores.Rows[indexDoctor].Cells[7].Value = doctor.IdArea;
+            }
         }
     }
 }

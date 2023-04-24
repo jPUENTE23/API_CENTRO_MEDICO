@@ -36,5 +36,24 @@ namespace INTERFAZ_CENTRO_MEDICO.API_REQUEST
                 return reponse;
             }
         }
+
+        public async Task<List<MPaciente>> MostrarPacientes()
+        {
+            string url = "https://localhost:7168/Paciente/Mostrar_Pacientes";
+
+            using (var httpCliente = new HttpClient())
+            {
+                List<MPaciente> lstPacientes = new List<MPaciente>();
+
+                HttpResponseMessage responsePacientes = await httpCliente.GetAsync(url);
+
+                if (responsePacientes.IsSuccessStatusCode)
+                {
+                    lstPacientes = await responsePacientes.Content.ReadAsAsync<List<MPaciente>>();
+                }
+
+                return lstPacientes;
+            }
+        }
     }
 }

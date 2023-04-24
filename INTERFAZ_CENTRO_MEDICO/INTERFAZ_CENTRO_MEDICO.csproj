@@ -55,6 +55,12 @@
     <Compile Include="API_REQUEST\RequestArea.cs" />
     <Compile Include="API_REQUEST\RequestDoctor.cs" />
     <Compile Include="API_REQUEST\RequestPacientes.cs" />
+    <Compile Include="Form_AreaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AreaMedica.Designer.cs">
+      <DependentUpon>Form_AreaMedica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Modelos\MPaciente.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_AreaMedica.resx">
+      <DependentUpon>Form_AreaMedica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Inicio.resx">
       <DependentUpon>Form_Inicio.cs</DependentUpon>
     </EmbeddedResource>

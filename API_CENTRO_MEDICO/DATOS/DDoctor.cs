@@ -27,5 +27,16 @@ namespace API_CENTRO_MEDICO.DATOS
 
             cmd.ExecuteNonQuery();
         }
+
+        public SqlDataReader ListarDoctores()
+        {
+            cmd.Connection = conn.AbrirConexionDB();
+            cmd.CommandText = "SP_LISTAR_DOCTORES";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlDataReader doctores = cmd.ExecuteReader();
+
+            return doctores;
+        }
     }
 }

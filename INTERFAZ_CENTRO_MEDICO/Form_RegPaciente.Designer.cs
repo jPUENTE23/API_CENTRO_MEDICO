@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cb_sexo = new System.Windows.Forms.ComboBox();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_RegMenu = new System.Windows.Forms.Button();
@@ -41,8 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cb_sexo = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGrid_Paciente = new System.Windows.Forms.DataGridView();
             this.id_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nom_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +50,7 @@
             this.edad_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexo_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Paciente)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -83,6 +83,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(310, 627);
             this.panel2.TabIndex = 1;
+            // 
+            // cb_sexo
+            // 
+            this.cb_sexo.FormattingEnabled = true;
+            this.cb_sexo.Items.AddRange(new object[] {
+            "F",
+            "M"});
+            this.cb_sexo.Location = new System.Drawing.Point(36, 491);
+            this.cb_sexo.Name = "cb_sexo";
+            this.cb_sexo.Size = new System.Drawing.Size(200, 21);
+            this.cb_sexo.TabIndex = 12;
             // 
             // txtEdad
             // 
@@ -183,31 +194,20 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
-            // cb_sexo
+            // dataGrid_Paciente
             // 
-            this.cb_sexo.FormattingEnabled = true;
-            this.cb_sexo.Items.AddRange(new object[] {
-            "F",
-            "M"});
-            this.cb_sexo.Location = new System.Drawing.Point(36, 491);
-            this.cb_sexo.Name = "cb_sexo";
-            this.cb_sexo.Size = new System.Drawing.Size(200, 21);
-            this.cb_sexo.TabIndex = 12;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGrid_Paciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_Paciente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_pac,
             this.nom_pac,
             this.Apaterno,
             this.Amaterno,
             this.edad_pac,
             this.sexo_pac});
-            this.dataGridView1.Location = new System.Drawing.Point(342, 166);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(695, 433);
-            this.dataGridView1.TabIndex = 2;
+            this.dataGrid_Paciente.Location = new System.Drawing.Point(342, 166);
+            this.dataGrid_Paciente.Name = "dataGrid_Paciente";
+            this.dataGrid_Paciente.Size = new System.Drawing.Size(695, 433);
+            this.dataGrid_Paciente.TabIndex = 2;
             // 
             // id_pac
             // 
@@ -244,13 +244,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 627);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGrid_Paciente);
             this.Controls.Add(this.panel2);
             this.Name = "Form_RegPaciente";
             this.Text = "Pacientes";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Paciente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -270,7 +270,7 @@
         private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cb_sexo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGrid_Paciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_pac;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom_pac;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apaterno;

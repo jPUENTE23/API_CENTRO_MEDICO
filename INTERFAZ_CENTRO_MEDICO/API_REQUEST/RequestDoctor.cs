@@ -31,6 +31,24 @@ namespace INTERFAZ_CENTRO_MEDICO.API_REQUEST
 
                 return response;
             }
-        } 
+        }
+        
+        public async Task<List<MDoctor>> MostrarDoctores()
+        {
+            string url = "https://localhost:7168/Doctor/Doctores_Registrados";
+            using (var httpCliente = new HttpClient())
+            {
+                List<MDoctor> lstDoctores = new List<MDoctor>();
+
+                HttpResponseMessage response = await httpCliente.GetAsync(url);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    lstDoctores = await response.Content.ReadAsAsync<List<MDoctor>>();
+                }
+
+                return lstDoctores;
+            }
+        }
     }
 }

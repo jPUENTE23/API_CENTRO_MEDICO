@@ -10,7 +10,7 @@ namespace API_CENTRO_MEDICO.Controllers
     public class CategoriaController : Controller
     {
         [HttpPost]
-        [Route("Categoria")]
+        [Route("AgregarArea")]
         public void AltaArea([FromBody] MArea Area)
         {
             var agregarArea = new DArea();

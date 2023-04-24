@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cb_sexo = new System.Windows.Forms.ComboBox();
             this.link_NuevaArea = new System.Windows.Forms.LinkLabel();
             this.cb_AreasM = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,8 +45,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cb_sexo = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGrid_Doctores = new System.Windows.Forms.DataGridView();
             this.id_doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nom_doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +55,7 @@
             this.isAcrtivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.area_medica = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Doctores)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -82,6 +82,17 @@
             this.panel2.Size = new System.Drawing.Size(287, 655);
             this.panel2.TabIndex = 2;
             // 
+            // cb_sexo
+            // 
+            this.cb_sexo.FormattingEnabled = true;
+            this.cb_sexo.Items.AddRange(new object[] {
+            "F",
+            "M"});
+            this.cb_sexo.Location = new System.Drawing.Point(36, 440);
+            this.cb_sexo.Name = "cb_sexo";
+            this.cb_sexo.Size = new System.Drawing.Size(200, 21);
+            this.cb_sexo.TabIndex = 15;
+            // 
             // link_NuevaArea
             // 
             this.link_NuevaArea.AutoSize = true;
@@ -92,6 +103,7 @@
             this.link_NuevaArea.TabStop = true;
             this.link_NuevaArea.Text = "Agregar nueva area";
             this.link_NuevaArea.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.link_NuevaArea.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_NuevaArea_LinkClicked);
             // 
             // cb_AreasM
             // 
@@ -220,21 +232,10 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
-            // cb_sexo
+            // dataGrid_Doctores
             // 
-            this.cb_sexo.FormattingEnabled = true;
-            this.cb_sexo.Items.AddRange(new object[] {
-            "F",
-            "M"});
-            this.cb_sexo.Location = new System.Drawing.Point(36, 440);
-            this.cb_sexo.Name = "cb_sexo";
-            this.cb_sexo.Size = new System.Drawing.Size(200, 21);
-            this.cb_sexo.TabIndex = 15;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGrid_Doctores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_Doctores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_doctor,
             this.nom_doctor,
             this.Apaterno,
@@ -243,10 +244,10 @@
             this.sexo_doc,
             this.isAcrtivo,
             this.area_medica});
-            this.dataGridView1.Location = new System.Drawing.Point(328, 168);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(643, 461);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGrid_Doctores.Location = new System.Drawing.Point(328, 168);
+            this.dataGrid_Doctores.Name = "dataGrid_Doctores";
+            this.dataGrid_Doctores.Size = new System.Drawing.Size(643, 461);
+            this.dataGrid_Doctores.TabIndex = 3;
             // 
             // id_doctor
             // 
@@ -293,13 +294,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1005, 655);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGrid_Doctores);
             this.Controls.Add(this.panel2);
             this.Name = "Form_Doctor";
             this.Text = "Form_octor";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Doctores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -323,7 +324,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.LinkLabel link_NuevaArea;
         private System.Windows.Forms.ComboBox cb_sexo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGrid_Doctores;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_doctor;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom_doctor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apaterno;

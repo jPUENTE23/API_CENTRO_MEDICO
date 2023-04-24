@@ -38,5 +38,19 @@ namespace INTERFAZ_CENTRO_MEDICO.API_REQUEST
             } 
         }
 
+        public async Task<HttpResponseMessage> agregarArea(MArea Area)
+        {
+            string url = "https://localhost:7168/Categoria/AgregarArea";
+            using (var httpCliente = new HttpClient())
+            {
+                MArea datosArea = new MArea();
+                datosArea.NombreArea = Area.NombreArea;
+
+                HttpResponseMessage response = await httpCliente.PostAsJsonAsync(url, datosArea);
+
+                return response;
+            }
+        } 
+
     }
 }
