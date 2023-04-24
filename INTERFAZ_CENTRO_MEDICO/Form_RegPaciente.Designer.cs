@@ -42,7 +42,15 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cb_sexo = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edad_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexo_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -186,16 +194,63 @@
             this.cb_sexo.Size = new System.Drawing.Size(200, 21);
             this.cb_sexo.TabIndex = 12;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_pac,
+            this.nom_pac,
+            this.Apaterno,
+            this.Amaterno,
+            this.edad_pac,
+            this.sexo_pac});
+            this.dataGridView1.Location = new System.Drawing.Point(342, 166);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(695, 433);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // id_pac
+            // 
+            this.id_pac.HeaderText = "ID PACIENTE";
+            this.id_pac.Name = "id_pac";
+            // 
+            // nom_pac
+            // 
+            this.nom_pac.HeaderText = "NOMBRE";
+            this.nom_pac.Name = "nom_pac";
+            // 
+            // Apaterno
+            // 
+            this.Apaterno.HeaderText = "A. PATERNO";
+            this.Apaterno.Name = "Apaterno";
+            // 
+            // Amaterno
+            // 
+            this.Amaterno.HeaderText = "A. MATERNO";
+            this.Amaterno.Name = "Amaterno";
+            // 
+            // edad_pac
+            // 
+            this.edad_pac.HeaderText = "EDAD";
+            this.edad_pac.Name = "edad_pac";
+            // 
+            // sexo_pac
+            // 
+            this.sexo_pac.HeaderText = "SEXO";
+            this.sexo_pac.Name = "sexo_pac";
+            // 
             // Form_RegPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 627);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Name = "Form_RegPaciente";
             this.Text = "Pacientes";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,5 +270,12 @@
         private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cb_sexo;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_pac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nom_pac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apaterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Amaterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn edad_pac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexo_pac;
     }
 }
