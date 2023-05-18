@@ -30,5 +30,12 @@ namespace INTERFAZ_CENTRO_MEDICO
             Form_Doctor formDoctor = new Form_Doctor();
             formDoctor.Show();
         }
+
+        private void btn_regCita_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CITA formCITA = new CITA();
+            formCITA.Show();
+        }
     }
 }
