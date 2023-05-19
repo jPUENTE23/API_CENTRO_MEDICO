@@ -46,6 +46,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGrid_Doctores = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.id_doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nom_doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +55,11 @@
             this.sexo_doc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAcrtivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.area_medica = new System.Windows.Forms.DataGridViewTextBoxColumn();
+ Keila
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+
+            this.elimanr = new System.Windows.Forms.DataGridViewImageColumn();
+ master
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Doctores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -264,12 +269,28 @@
             this.edad_doc,
             this.sexo_doc,
             this.isAcrtivo,
+ Keila
             this.area_medica});
             this.dataGrid_Doctores.Cursor = System.Windows.Forms.Cursors.Hand;
+=======
+            this.area_medica,
+            this.elimanr});
+ master
             this.dataGrid_Doctores.Location = new System.Drawing.Point(328, 168);
             this.dataGrid_Doctores.Name = "dataGrid_Doctores";
+            this.dataGrid_Doctores.RowHeadersVisible = false;
             this.dataGrid_Doctores.Size = new System.Drawing.Size(643, 461);
             this.dataGrid_Doctores.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.titulo;
+            this.pictureBox1.Location = new System.Drawing.Point(328, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(241, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // id_doctor
             // 
@@ -311,15 +332,17 @@
             this.area_medica.HeaderText = "AREA MEDICA";
             this.area_medica.Name = "area_medica";
             // 
+ Keila
             // pictureBox1
+
+            // elimanr
+ master
             // 
-            this.pictureBox1.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.titulo;
-            this.pictureBox1.Location = new System.Drawing.Point(328, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(241, 117);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.elimanr.HeaderText = "ELIMINAR";
+            this.elimanr.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.iconer_elimanr;
+            this.elimanr.Name = "elimanr";
+            this.elimanr.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.elimanr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Form_Doctor
             // 
@@ -360,6 +383,7 @@
         private System.Windows.Forms.LinkLabel link_NuevaArea;
         private System.Windows.Forms.ComboBox cb_sexo;
         private System.Windows.Forms.DataGridView dataGrid_Doctores;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_doctor;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom_doctor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apaterno;
@@ -368,6 +392,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sexo_doc;
         private System.Windows.Forms.DataGridViewTextBoxColumn isAcrtivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn area_medica;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewImageColumn elimanr;
     }
 }

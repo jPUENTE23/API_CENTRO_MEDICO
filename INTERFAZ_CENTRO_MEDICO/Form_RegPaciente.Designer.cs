@@ -43,13 +43,18 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGrid_Paciente = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.id_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nom_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edad_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexo_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+ Keila
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+ master
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Paciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -219,42 +224,18 @@
             this.Apaterno,
             this.Amaterno,
             this.edad_pac,
+Keila
             this.sexo_pac});
             this.dataGrid_Paciente.Cursor = System.Windows.Forms.Cursors.Hand;
+
+            this.sexo_pac,
+            this.eliminar});
+master
             this.dataGrid_Paciente.Location = new System.Drawing.Point(342, 166);
             this.dataGrid_Paciente.Name = "dataGrid_Paciente";
+            this.dataGrid_Paciente.RowHeadersVisible = false;
             this.dataGrid_Paciente.Size = new System.Drawing.Size(695, 433);
             this.dataGrid_Paciente.TabIndex = 2;
-            // 
-            // id_pac
-            // 
-            this.id_pac.HeaderText = "ID PACIENTE";
-            this.id_pac.Name = "id_pac";
-            // 
-            // nom_pac
-            // 
-            this.nom_pac.HeaderText = "NOMBRE";
-            this.nom_pac.Name = "nom_pac";
-            // 
-            // Apaterno
-            // 
-            this.Apaterno.HeaderText = "A. PATERNO";
-            this.Apaterno.Name = "Apaterno";
-            // 
-            // Amaterno
-            // 
-            this.Amaterno.HeaderText = "A. MATERNO";
-            this.Amaterno.Name = "Amaterno";
-            // 
-            // edad_pac
-            // 
-            this.edad_pac.HeaderText = "EDAD";
-            this.edad_pac.Name = "edad_pac";
-            // 
-            // sexo_pac
-            // 
-            this.sexo_pac.HeaderText = "SEXO";
-            this.sexo_pac.Name = "sexo_pac";
             // 
             // pictureBox1
             // 
@@ -265,6 +246,55 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // id_pac
+            // 
+            this.id_pac.Frozen = true;
+            this.id_pac.HeaderText = "ID PACIENTE";
+            this.id_pac.Name = "id_pac";
+            // 
+            // nom_pac
+            // 
+            this.nom_pac.Frozen = true;
+            this.nom_pac.HeaderText = "NOMBRE";
+            this.nom_pac.Name = "nom_pac";
+            // 
+            // Apaterno
+            // 
+            this.Apaterno.Frozen = true;
+            this.Apaterno.HeaderText = "A. PATERNO";
+            this.Apaterno.Name = "Apaterno";
+            // 
+            // Amaterno
+            // 
+            this.Amaterno.Frozen = true;
+            this.Amaterno.HeaderText = "A. MATERNO";
+            this.Amaterno.Name = "Amaterno";
+            // 
+            // edad_pac
+            // 
+            this.edad_pac.Frozen = true;
+            this.edad_pac.HeaderText = "EDAD";
+            this.edad_pac.Name = "edad_pac";
+            // 
+            // sexo_pac
+            // 
+            this.sexo_pac.Frozen = true;
+            this.sexo_pac.HeaderText = "SEXO";
+            this.sexo_pac.Name = "sexo_pac";
+            // 
+Keila
+            // pictureBox1
+
+            // eliminar
+master
+            // 
+            this.eliminar.Frozen = true;
+            this.eliminar.HeaderText = "ELIMINAR";
+            this.eliminar.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.iconer_elimanr;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Form_RegPaciente
             // 
@@ -301,12 +331,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cb_sexo;
         private System.Windows.Forms.DataGridView dataGrid_Paciente;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_pac;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom_pac;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apaterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amaterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn edad_pac;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexo_pac;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewImageColumn eliminar;
     }
 }
