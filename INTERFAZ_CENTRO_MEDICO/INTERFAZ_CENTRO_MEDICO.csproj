@@ -130,6 +130,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -144,6 +145,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anterior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anterior1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registrarcita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registrarcita1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registrarcita2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registrarcita3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registrarcita4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO2.2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\titulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cruz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ant1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
