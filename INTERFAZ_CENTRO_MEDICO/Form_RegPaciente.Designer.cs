@@ -50,7 +50,11 @@
             this.Amaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edad_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexo_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+ Keila
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+
             this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+ master
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Paciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -135,6 +139,7 @@
             // btn_AgregarPac
             // 
             this.btn_AgregarPac.BackColor = System.Drawing.Color.Silver;
+            this.btn_AgregarPac.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_AgregarPac.FlatAppearance.BorderSize = 0;
             this.btn_AgregarPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarPac.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -219,8 +224,13 @@
             this.Apaterno,
             this.Amaterno,
             this.edad_pac,
+Keila
+            this.sexo_pac});
+            this.dataGrid_Paciente.Cursor = System.Windows.Forms.Cursors.Hand;
+
             this.sexo_pac,
             this.eliminar});
+master
             this.dataGrid_Paciente.Location = new System.Drawing.Point(342, 166);
             this.dataGrid_Paciente.Name = "dataGrid_Paciente";
             this.dataGrid_Paciente.RowHeadersVisible = false;
@@ -273,7 +283,11 @@
             this.sexo_pac.HeaderText = "SEXO";
             this.sexo_pac.Name = "sexo_pac";
             // 
+Keila
+            // pictureBox1
+
             // eliminar
+master
             // 
             this.eliminar.Frozen = true;
             this.eliminar.HeaderText = "ELIMINAR";

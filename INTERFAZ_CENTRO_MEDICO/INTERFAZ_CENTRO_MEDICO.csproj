@@ -201,7 +201,11 @@
     <None Include="Resources\ant1.png" />
   </ItemGroup>
   <ItemGroup>
+Keila
+    <None Include="Resources\titulo2.png" />
+
     <None Include="Resources\iconer elimanr.png" />
+master
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
