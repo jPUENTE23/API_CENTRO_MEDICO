@@ -55,11 +55,7 @@
             this.sexo_doc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAcrtivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.area_medica = new System.Windows.Forms.DataGridViewTextBoxColumn();
- Keila
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-
             this.elimanr = new System.Windows.Forms.DataGridViewImageColumn();
- master
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Doctores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -121,7 +117,6 @@
             // link_NuevaArea
             // 
             this.link_NuevaArea.AutoSize = true;
-            this.link_NuevaArea.Cursor = System.Windows.Forms.Cursors.Hand;
             this.link_NuevaArea.Location = new System.Drawing.Point(135, 542);
             this.link_NuevaArea.Name = "link_NuevaArea";
             this.link_NuevaArea.Size = new System.Drawing.Size(101, 13);
@@ -269,13 +264,8 @@
             this.edad_doc,
             this.sexo_doc,
             this.isAcrtivo,
- Keila
-            this.area_medica});
-            this.dataGrid_Doctores.Cursor = System.Windows.Forms.Cursors.Hand;
-=======
             this.area_medica,
             this.elimanr});
- master
             this.dataGrid_Doctores.Location = new System.Drawing.Point(328, 168);
             this.dataGrid_Doctores.Name = "dataGrid_Doctores";
             this.dataGrid_Doctores.RowHeadersVisible = false;
@@ -332,11 +322,7 @@
             this.area_medica.HeaderText = "AREA MEDICA";
             this.area_medica.Name = "area_medica";
             // 
- Keila
-            // pictureBox1
-
             // elimanr
- master
             // 
             this.elimanr.HeaderText = "ELIMINAR";
             this.elimanr.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.iconer_elimanr;

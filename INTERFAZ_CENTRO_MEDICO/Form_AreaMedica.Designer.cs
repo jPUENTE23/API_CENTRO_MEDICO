@@ -56,7 +56,6 @@
             // btn_agrearArea
             // 
             this.btn_agrearArea.BackColor = System.Drawing.Color.Silver;
-            this.btn_agrearArea.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_agrearArea.FlatAppearance.BorderSize = 0;
             this.btn_agrearArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_agrearArea.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,7 +72,6 @@
             this.link_Regresar.ActiveLinkColor = System.Drawing.Color.DarkSlateGray;
             this.link_Regresar.AutoSize = true;
             this.link_Regresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.link_Regresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.link_Regresar.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_Regresar.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.anterior;
             this.link_Regresar.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
