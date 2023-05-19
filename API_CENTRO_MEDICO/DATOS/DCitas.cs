@@ -21,7 +21,10 @@ namespace API_CENTRO_MEDICO.DATOS
             cmd.Parameters.AddWithValue("@IdDoctor", Cita.IdDoctor);
             cmd.Parameters.AddWithValue("@FechaCita", Cita.Fecha_Cita);
 
+            cmd.Parameters.Clear();
             cmd.ExecuteNonQuery();
         }
+
+
     }
 }

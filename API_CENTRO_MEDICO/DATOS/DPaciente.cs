@@ -37,5 +37,17 @@ namespace API_CENTRO_MEDICO.DATOS
 
             return datosPacientes;
         }
+
+        public void eliminarPaciente(int idPaciente)
+        {
+            cmd.Connection = conn.AbrirConexionDB();
+            cmd.CommandText = "SP_ELIMINAR_PACIENTE";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@IdPaciente", idPaciente);
+
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
+        }
     }
 }
