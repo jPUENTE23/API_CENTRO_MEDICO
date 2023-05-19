@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_RegMenu = new System.Windows.Forms.Button();
             this.cb_sexo = new System.Windows.Forms.ComboBox();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,14 +43,14 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGrid_Paciente = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.id_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nom_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Amaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edad_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexo_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_RegMenu = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Paciente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -86,6 +87,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(310, 627);
             this.panel2.TabIndex = 1;
+            // 
+            // btn_RegMenu
+            // 
+            this.btn_RegMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_RegMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_RegMenu.FlatAppearance.BorderSize = 0;
+            this.btn_RegMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_RegMenu.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.ant1;
+            this.btn_RegMenu.Location = new System.Drawing.Point(26, 3);
+            this.btn_RegMenu.Name = "btn_RegMenu";
+            this.btn_RegMenu.Size = new System.Drawing.Size(63, 62);
+            this.btn_RegMenu.TabIndex = 1;
+            this.btn_RegMenu.UseVisualStyleBackColor = true;
+            this.btn_RegMenu.Click += new System.EventHandler(this.btn_RegMenu_Click);
             // 
             // cb_sexo
             // 
@@ -204,55 +219,13 @@
             this.Apaterno,
             this.Amaterno,
             this.edad_pac,
-            this.sexo_pac});
+            this.sexo_pac,
+            this.eliminar});
             this.dataGrid_Paciente.Location = new System.Drawing.Point(342, 166);
             this.dataGrid_Paciente.Name = "dataGrid_Paciente";
+            this.dataGrid_Paciente.RowHeadersVisible = false;
             this.dataGrid_Paciente.Size = new System.Drawing.Size(695, 433);
             this.dataGrid_Paciente.TabIndex = 2;
-            // 
-            // id_pac
-            // 
-            this.id_pac.HeaderText = "ID PACIENTE";
-            this.id_pac.Name = "id_pac";
-            // 
-            // nom_pac
-            // 
-            this.nom_pac.HeaderText = "NOMBRE";
-            this.nom_pac.Name = "nom_pac";
-            // 
-            // Apaterno
-            // 
-            this.Apaterno.HeaderText = "A. PATERNO";
-            this.Apaterno.Name = "Apaterno";
-            // 
-            // Amaterno
-            // 
-            this.Amaterno.HeaderText = "A. MATERNO";
-            this.Amaterno.Name = "Amaterno";
-            // 
-            // edad_pac
-            // 
-            this.edad_pac.HeaderText = "EDAD";
-            this.edad_pac.Name = "edad_pac";
-            // 
-            // sexo_pac
-            // 
-            this.sexo_pac.HeaderText = "SEXO";
-            this.sexo_pac.Name = "sexo_pac";
-            // 
-            // btn_RegMenu
-            // 
-            this.btn_RegMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_RegMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_RegMenu.FlatAppearance.BorderSize = 0;
-            this.btn_RegMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RegMenu.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.ant1;
-            this.btn_RegMenu.Location = new System.Drawing.Point(26, 3);
-            this.btn_RegMenu.Name = "btn_RegMenu";
-            this.btn_RegMenu.Size = new System.Drawing.Size(63, 62);
-            this.btn_RegMenu.TabIndex = 1;
-            this.btn_RegMenu.UseVisualStyleBackColor = true;
-            this.btn_RegMenu.Click += new System.EventHandler(this.btn_RegMenu_Click);
             // 
             // pictureBox1
             // 
@@ -263,6 +236,51 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // id_pac
+            // 
+            this.id_pac.Frozen = true;
+            this.id_pac.HeaderText = "ID PACIENTE";
+            this.id_pac.Name = "id_pac";
+            // 
+            // nom_pac
+            // 
+            this.nom_pac.Frozen = true;
+            this.nom_pac.HeaderText = "NOMBRE";
+            this.nom_pac.Name = "nom_pac";
+            // 
+            // Apaterno
+            // 
+            this.Apaterno.Frozen = true;
+            this.Apaterno.HeaderText = "A. PATERNO";
+            this.Apaterno.Name = "Apaterno";
+            // 
+            // Amaterno
+            // 
+            this.Amaterno.Frozen = true;
+            this.Amaterno.HeaderText = "A. MATERNO";
+            this.Amaterno.Name = "Amaterno";
+            // 
+            // edad_pac
+            // 
+            this.edad_pac.Frozen = true;
+            this.edad_pac.HeaderText = "EDAD";
+            this.edad_pac.Name = "edad_pac";
+            // 
+            // sexo_pac
+            // 
+            this.sexo_pac.Frozen = true;
+            this.sexo_pac.HeaderText = "SEXO";
+            this.sexo_pac.Name = "sexo_pac";
+            // 
+            // eliminar
+            // 
+            this.eliminar.Frozen = true;
+            this.eliminar.HeaderText = "ELIMINAR";
+            this.eliminar.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.iconer_elimanr;
+            this.eliminar.Name = "eliminar";
+            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Form_RegPaciente
             // 
@@ -299,12 +317,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cb_sexo;
         private System.Windows.Forms.DataGridView dataGrid_Paciente;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_pac;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom_pac;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apaterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amaterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn edad_pac;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexo_pac;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewImageColumn eliminar;
     }
 }

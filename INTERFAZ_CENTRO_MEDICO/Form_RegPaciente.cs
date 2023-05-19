@@ -58,6 +58,8 @@ namespace INTERFAZ_CENTRO_MEDICO
                 MessageBox.Show("El paciente se ah registrado correctamente");
             }
 
+            recargarPantalla();
+
         }
 
 
@@ -78,6 +80,13 @@ namespace INTERFAZ_CENTRO_MEDICO
                 dataGrid_Paciente.Rows[indexPaciente].Cells[5].Value = paciente.Sexo;
 
             }
+        }
+
+        public void recargarPantalla()
+        {
+            this.Hide();
+            Form_RegPaciente formPaciente = new Form_RegPaciente();
+            formPaciente.Show();
         }
     }
 }

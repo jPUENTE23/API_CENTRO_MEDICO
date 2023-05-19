@@ -124,6 +124,9 @@
   <data name="anterior" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\anterior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ant1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ant1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cruz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cruz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -169,7 +172,7 @@
   <data name="registrarcita4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\registrarcita4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ant1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ant1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconer elimanr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconer elimanr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

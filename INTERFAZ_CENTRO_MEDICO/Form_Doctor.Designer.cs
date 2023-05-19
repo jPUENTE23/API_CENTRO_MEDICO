@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_RegMenu = new System.Windows.Forms.Button();
             this.cb_sexo = new System.Windows.Forms.ComboBox();
             this.link_NuevaArea = new System.Windows.Forms.LinkLabel();
             this.cb_AreasM = new System.Windows.Forms.ComboBox();
@@ -45,6 +46,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGrid_Doctores = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.id_doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nom_doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,8 +55,7 @@
             this.sexo_doc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAcrtivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.area_medica = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_RegMenu = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.elimanr = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Doctores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -84,6 +85,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(287, 655);
             this.panel2.TabIndex = 2;
+            // 
+            // btn_RegMenu
+            // 
+            this.btn_RegMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_RegMenu.BackgroundImage = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.anterior1;
+            this.btn_RegMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_RegMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_RegMenu.FlatAppearance.BorderSize = 0;
+            this.btn_RegMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_RegMenu.Location = new System.Drawing.Point(36, 12);
+            this.btn_RegMenu.Name = "btn_RegMenu";
+            this.btn_RegMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_RegMenu.Size = new System.Drawing.Size(51, 51);
+            this.btn_RegMenu.TabIndex = 1;
+            this.btn_RegMenu.UseVisualStyleBackColor = false;
+            this.btn_RegMenu.Click += new System.EventHandler(this.btn_RegMenu_Click);
             // 
             // cb_sexo
             // 
@@ -247,11 +264,23 @@
             this.edad_doc,
             this.sexo_doc,
             this.isAcrtivo,
-            this.area_medica});
+            this.area_medica,
+            this.elimanr});
             this.dataGrid_Doctores.Location = new System.Drawing.Point(328, 168);
             this.dataGrid_Doctores.Name = "dataGrid_Doctores";
+            this.dataGrid_Doctores.RowHeadersVisible = false;
             this.dataGrid_Doctores.Size = new System.Drawing.Size(643, 461);
             this.dataGrid_Doctores.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.titulo;
+            this.pictureBox1.Location = new System.Drawing.Point(328, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(241, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // id_doctor
             // 
@@ -293,31 +322,13 @@
             this.area_medica.HeaderText = "AREA MEDICA";
             this.area_medica.Name = "area_medica";
             // 
-            // btn_RegMenu
+            // elimanr
             // 
-            this.btn_RegMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_RegMenu.BackgroundImage = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.anterior1;
-            this.btn_RegMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_RegMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_RegMenu.FlatAppearance.BorderSize = 0;
-            this.btn_RegMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RegMenu.Location = new System.Drawing.Point(36, 12);
-            this.btn_RegMenu.Name = "btn_RegMenu";
-            this.btn_RegMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_RegMenu.Size = new System.Drawing.Size(51, 51);
-            this.btn_RegMenu.TabIndex = 1;
-            this.btn_RegMenu.UseVisualStyleBackColor = false;
-            this.btn_RegMenu.Click += new System.EventHandler(this.btn_RegMenu_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.titulo;
-            this.pictureBox1.Location = new System.Drawing.Point(328, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(241, 117);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.elimanr.HeaderText = "ELIMINAR";
+            this.elimanr.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.iconer_elimanr;
+            this.elimanr.Name = "elimanr";
+            this.elimanr.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.elimanr.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Form_Doctor
             // 
@@ -358,6 +369,7 @@
         private System.Windows.Forms.LinkLabel link_NuevaArea;
         private System.Windows.Forms.ComboBox cb_sexo;
         private System.Windows.Forms.DataGridView dataGrid_Doctores;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_doctor;
         private System.Windows.Forms.DataGridViewTextBoxColumn nom_doctor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apaterno;
@@ -366,6 +378,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sexo_doc;
         private System.Windows.Forms.DataGridViewTextBoxColumn isAcrtivo;
         private System.Windows.Forms.DataGridViewTextBoxColumn area_medica;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewImageColumn elimanr;
     }
 }

@@ -41,5 +41,15 @@ namespace API_CENTRO_MEDICO.Controllers
             }
             return lstDoctores;
         }
+
+        [HttpDelete]
+        [Route("EliminarDoctor/{idDoctor}")]
+        public IActionResult elimnarDoctor(int idDoctor)
+        {
+            var funcionDoctor = new DDoctor();
+            funcionDoctor.elimnarDoctor(idDoctor);
+
+            return StatusCode(StatusCodes.Status200OK, new { response = "El registro se elimino corrractente" });
+        }
     }
 }

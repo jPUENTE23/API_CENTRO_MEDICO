@@ -38,5 +38,17 @@ namespace API_CENTRO_MEDICO.DATOS
 
             return doctores;
         }
+
+        public void elimnarDoctor(int IdDoctor)
+        {
+            cmd.Connection = conn.AbrirConexionDB();
+            cmd.CommandText = "SP_ELIMINAR_DOCTOR";
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@IdDoctor", IdDoctor);
+
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
+        }
     }
 }
