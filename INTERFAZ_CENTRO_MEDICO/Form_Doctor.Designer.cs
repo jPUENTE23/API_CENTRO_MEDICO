@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_RegMenu = new System.Windows.Forms.Button();
             this.cb_sexo = new System.Windows.Forms.ComboBox();
             this.link_NuevaArea = new System.Windows.Forms.LinkLabel();
             this.cb_AreasM = new System.Windows.Forms.ComboBox();
@@ -53,7 +54,6 @@
             this.sexo_doc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isAcrtivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.area_medica = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_RegMenu = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Doctores)).BeginInit();
@@ -85,6 +85,22 @@
             this.panel2.Size = new System.Drawing.Size(287, 655);
             this.panel2.TabIndex = 2;
             // 
+            // btn_RegMenu
+            // 
+            this.btn_RegMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_RegMenu.BackgroundImage = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.anterior1;
+            this.btn_RegMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_RegMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_RegMenu.FlatAppearance.BorderSize = 0;
+            this.btn_RegMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_RegMenu.Location = new System.Drawing.Point(36, 12);
+            this.btn_RegMenu.Name = "btn_RegMenu";
+            this.btn_RegMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btn_RegMenu.Size = new System.Drawing.Size(51, 51);
+            this.btn_RegMenu.TabIndex = 1;
+            this.btn_RegMenu.UseVisualStyleBackColor = false;
+            this.btn_RegMenu.Click += new System.EventHandler(this.btn_RegMenu_Click);
+            // 
             // cb_sexo
             // 
             this.cb_sexo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -100,6 +116,7 @@
             // link_NuevaArea
             // 
             this.link_NuevaArea.AutoSize = true;
+            this.link_NuevaArea.Cursor = System.Windows.Forms.Cursors.Hand;
             this.link_NuevaArea.Location = new System.Drawing.Point(135, 542);
             this.link_NuevaArea.Name = "link_NuevaArea";
             this.link_NuevaArea.Size = new System.Drawing.Size(101, 13);
@@ -248,6 +265,7 @@
             this.sexo_doc,
             this.isAcrtivo,
             this.area_medica});
+            this.dataGrid_Doctores.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGrid_Doctores.Location = new System.Drawing.Point(328, 168);
             this.dataGrid_Doctores.Name = "dataGrid_Doctores";
             this.dataGrid_Doctores.Size = new System.Drawing.Size(643, 461);
@@ -292,22 +310,6 @@
             // 
             this.area_medica.HeaderText = "AREA MEDICA";
             this.area_medica.Name = "area_medica";
-            // 
-            // btn_RegMenu
-            // 
-            this.btn_RegMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btn_RegMenu.BackgroundImage = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.anterior1;
-            this.btn_RegMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_RegMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_RegMenu.FlatAppearance.BorderSize = 0;
-            this.btn_RegMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RegMenu.Location = new System.Drawing.Point(36, 12);
-            this.btn_RegMenu.Name = "btn_RegMenu";
-            this.btn_RegMenu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_RegMenu.Size = new System.Drawing.Size(51, 51);
-            this.btn_RegMenu.TabIndex = 1;
-            this.btn_RegMenu.UseVisualStyleBackColor = false;
-            this.btn_RegMenu.Click += new System.EventHandler(this.btn_RegMenu_Click);
             // 
             // pictureBox1
             // 

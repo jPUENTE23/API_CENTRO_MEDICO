@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_RegMenu = new System.Windows.Forms.Button();
             this.cb_sexo = new System.Windows.Forms.ComboBox();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.Amaterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edad_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexo_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_RegMenu = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Paciente)).BeginInit();
@@ -87,6 +87,20 @@
             this.panel2.Size = new System.Drawing.Size(310, 627);
             this.panel2.TabIndex = 1;
             // 
+            // btn_RegMenu
+            // 
+            this.btn_RegMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_RegMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_RegMenu.FlatAppearance.BorderSize = 0;
+            this.btn_RegMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_RegMenu.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.ant1;
+            this.btn_RegMenu.Location = new System.Drawing.Point(26, 3);
+            this.btn_RegMenu.Name = "btn_RegMenu";
+            this.btn_RegMenu.Size = new System.Drawing.Size(63, 62);
+            this.btn_RegMenu.TabIndex = 1;
+            this.btn_RegMenu.UseVisualStyleBackColor = true;
+            this.btn_RegMenu.Click += new System.EventHandler(this.btn_RegMenu_Click);
+            // 
             // cb_sexo
             // 
             this.cb_sexo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,6 +134,7 @@
             // btn_AgregarPac
             // 
             this.btn_AgregarPac.BackColor = System.Drawing.Color.Silver;
+            this.btn_AgregarPac.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_AgregarPac.FlatAppearance.BorderSize = 0;
             this.btn_AgregarPac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AgregarPac.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,6 +220,7 @@
             this.Amaterno,
             this.edad_pac,
             this.sexo_pac});
+            this.dataGrid_Paciente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGrid_Paciente.Location = new System.Drawing.Point(342, 166);
             this.dataGrid_Paciente.Name = "dataGrid_Paciente";
             this.dataGrid_Paciente.Size = new System.Drawing.Size(695, 433);
@@ -239,20 +255,6 @@
             // 
             this.sexo_pac.HeaderText = "SEXO";
             this.sexo_pac.Name = "sexo_pac";
-            // 
-            // btn_RegMenu
-            // 
-            this.btn_RegMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_RegMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_RegMenu.FlatAppearance.BorderSize = 0;
-            this.btn_RegMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RegMenu.Image = global::INTERFAZ_CENTRO_MEDICO.Properties.Resources.ant1;
-            this.btn_RegMenu.Location = new System.Drawing.Point(26, 3);
-            this.btn_RegMenu.Name = "btn_RegMenu";
-            this.btn_RegMenu.Size = new System.Drawing.Size(63, 62);
-            this.btn_RegMenu.TabIndex = 1;
-            this.btn_RegMenu.UseVisualStyleBackColor = true;
-            this.btn_RegMenu.Click += new System.EventHandler(this.btn_RegMenu_Click);
             // 
             // pictureBox1
             // 
