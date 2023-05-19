@@ -5,21 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
+using INTERFAZ_CENTRO_MEDICO.Modelos;
 
 namespace INTERFAZ_CENTRO_MEDICO.API_REQUEST
 {
     class Twillio
     {
-        //string accountSid = Environment.GetEnvironmentVariable("ACb7667c8a95b7f6f530298b040480c931");
-        //string authToken = Environment.GetEnvironmentVariable("9428ca9c2e909d2ca2c8d4e38498e4cc");
+
+        public void enviarMensaje(dynamic Telefono)
+        {
 
 
-        //TwilioClient.Init(accountSid, authToken);
+            string accountSid = "ACb7667c8a95b7f6f530298b040480c931";
+            string authToken = "9428ca9c2e909d2ca2c8d4e38498e4cc";
 
-        //var message = MessageResource.Create(
-        //    body: "Hello there!",
-        //    from: new Twilio.Types.PhoneNumber("whatsapp:+14155238886"),
-        //    to: new Twilio.Types.PhoneNumber("whatsapp:+15005550006")
-        //);
+
+            TwilioClient.Init(accountSid, authToken);
+
+            var message = MessageResource.Create(
+                body: "Heloo",
+                from: new Twilio.Types.PhoneNumber("+12526756880"),
+                to: new Twilio.Types.PhoneNumber($"+52{Telefono}")
+            );
+        }
+        
     }
 }

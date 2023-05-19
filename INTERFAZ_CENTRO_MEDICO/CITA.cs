@@ -92,13 +92,12 @@ namespace INTERFAZ_CENTRO_MEDICO
 
         private async void regCita_Click(object sender, EventArgs e)
         {
+            Twillio funcionTwilio = new Twillio();
             MCita Cita = new MCita();
 
             Cita.Fecha_Cita = dateTimePicker_Cita.Value;
             Cita.IdPaciente = IdPaciente;
             Cita.IdDoctor = IdDoctor;
-
-
 
             RequestCita funcionCita = new RequestCita();
             HttpResponseMessage resp = await funcionCita.AgregarCita(Cita);
@@ -106,6 +105,8 @@ namespace INTERFAZ_CENTRO_MEDICO
             if (resp.IsSuccessStatusCode)
             {
                 MessageBox.Show("La cita se ah registrado correctamente");
+                dynamic telefono = txt_Telefono.Text;
+                funcionTwilio.enviarMensaje(telefono);
             }
             else
             {

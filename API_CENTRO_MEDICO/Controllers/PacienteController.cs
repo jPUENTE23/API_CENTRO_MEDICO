@@ -40,5 +40,15 @@ namespace API_CENTRO_MEDICO.Controllers
 
             return lstPacientes;
         }
+
+        [HttpDelete]
+        [Route("ElimnarPaciente/{IdPaciente}")]
+        public IActionResult ElimnarPaciente(int IdPaciente)
+        {
+            var funcionPaciente = new DPaciente();
+            funcionPaciente.eliminarPaciente(IdPaciente);
+
+            return StatusCode(StatusCodes.Status200OK, new {Response = "El rergistro se ah eliminado"});
+        }
     }
 }
