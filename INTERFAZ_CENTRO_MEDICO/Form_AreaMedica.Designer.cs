@@ -41,9 +41,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(32, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 22);
+            this.label1.Size = new System.Drawing.Size(237, 22);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre de la área medica:";
+            this.label1.Text = "Nombre de la área Medica:";
             // 
             // txt_areaMedica
             // 
